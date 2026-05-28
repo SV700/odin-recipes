@@ -1,0 +1,64 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-size: 64;
+
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    font-size: 22px;
+
+}
+   
+
+
+.right img {
+    width: 300px;
+    border-radius: 30px;
+    transform: rotate(0deg); /* gives it that tilted look like in your sketch */
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 900;
+}
+.left {
+    max-width: 400px;
+}
+button:hover {
+    background-color: gray;
+    cursor: pointer;      /* shows hand cursor */
+}
+
+ul {
+    list-style-type: square;   /* ■ square */
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 10% 0% 10%;  /* removes bottom padding */
+    gap: 10px;
+    height: 400px;
+}
+.scroll-arrow {
+    text-align: center;
+    font-size: 36px;
+    color: black;
+    animation: bounce 1.5s infinite;
+    margin: 20px 0;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}

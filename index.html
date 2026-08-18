@@ -29,6 +29,15 @@
 			let x = 0, y = 0;
 			let dx = 2, dy = 2;
 
+			const images = [
+				'mynd4.png',
+				'mynd1.png',
+				'mynd2.png',
+				'mynd3.png',
+				'mynd5.png'
+			];
+			let imgIndex = 0;
+
 			dvdImg.addEventListener('click', () => {
 				if (floating) return;
 
@@ -42,6 +51,11 @@
 				animate();
 			});
 
+			function nextImage() {
+				imgIndex = (imgIndex + 1) % images.length;
+				dvdImg.src = images[imgIndex];
+			}
+
 			function animate() {
 				if (!floating) return;
 
@@ -53,8 +67,18 @@
 				x += dx;
 				y += dy;
 
-				if (x <= 0 || x >= maxX) dx *= -1;
-				if (y <= 0 || y >= maxY) dy *= -1;
+				let bounced = false;
+
+				if (x <= 0 || x >= maxX) {
+					dx *= -1;
+					bounced = true;
+				}
+				if (y <= 0 || y >= maxY) {
+					dy *= -1;
+					bounced = true;
+				}
+
+				if (bounced) nextImage();
 
 				x = Math.max(0, Math.min(x, maxX));
 				y = Math.max(0, Math.min(y, maxY));

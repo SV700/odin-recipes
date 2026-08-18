@@ -6,10 +6,6 @@
 		<title>Vefsíða</title>
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="image/png" href="mynd4.png">
-
-		<style>
-		
-		</style>
 	</head>
 	
 	<body>
@@ -17,17 +13,53 @@
     		<div class="container">
         		<div class="left">
             		<h1>SVEINN VALFELLS.</h1>
-	
-        
         		</div>
 				
         		<div class="right">
-            	<img src="mynd4.png" alt="mynd" />
+            		<img id="dvd-img" src="mynd4.png" alt="mynd" />
         		</div>
-    		
-			
-	</main>
+			</div>
+		</main>
+
+		<script>
+			const dvdImg = document.getElementById('dvd-img');
+			let floating = false;
+			let x = 0, y = 0;
+			let dx = 2, dy = 2;
+
+			dvdImg.addEventListener('click', () => {
+				if (floating) return;
+
+				floating = true;
+				const rect = dvdImg.getBoundingClientRect();
+				x = rect.left;
+				y = rect.top;
+
+				dvdImg.classList.add('floating');
+				animate();
+			});
+
+			function animate() {
+				if (!floating) return;
+
+				const imgWidth = dvdImg.offsetWidth;
+				const imgHeight = dvdImg.offsetHeight;
+				const maxX = window.innerWidth - imgWidth;
+				const maxY = window.innerHeight - imgHeight;
+
+				x += dx;
+				y += dy;
+
+				if (x <= 0 || x >= maxX) dx *= -1;
+				if (y <= 0 || y >= maxY) dy *= -1;
+
+				x = Math.max(0, Math.min(x, maxX));
+				y = Math.max(0, Math.min(y, maxY));
+
+				dvdImg.style.transform = `translate(${x}px, ${y}px)`;
+
+				requestAnimationFrame(animate);
+			}
+		</script>
 	</body>
 </html>
-
-

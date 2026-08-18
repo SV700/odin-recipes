@@ -71,6 +71,18 @@ ul {
     50% { transform: translateY(10px); }
 }
 
+#dvd-img {
+    cursor: pointer;
+}
+
+#dvd-img.floating {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    pointer-events: none;
+}
+
 @media (max-width: 700px) {
     body {
         font-size: 18px;

@@ -1,13 +1,18 @@
 * {
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 p {
-    font-size: 64;
-
-    
+    font-size: 64px;
 }
-main{
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,41 +20,44 @@ main{
 
 body {
     font-size: 22px;
-
+    margin: 0;
 }
-   
-
 
 .right img {
     width: 300px;
+    max-width: 100%;
+    height: auto;
     border-radius: 30px;
-    transform: rotate(0deg); /* gives it that tilted look like in your sketch */
 }
 
 h1 {
     font-size: 72px;
     font-weight: 900;
 }
+
 .left {
     max-width: 400px;
 }
+
 button:hover {
     background-color: gray;
-    cursor: pointer;      /* shows hand cursor */
+    cursor: pointer;
 }
 
 ul {
-    list-style-type: square;   /* ■ square */
-
+    list-style-type: square;
 }
-.container{
+
+.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5% 10% 0% 10%;  /* removes bottom padding */
+    flex-wrap: wrap;
+    padding: 5% 10% 0% 10%;
     gap: 10px;
-    height: 400px;
+    min-height: 400px;
 }
+
 .scroll-arrow {
     text-align: center;
     font-size: 36px;
@@ -62,16 +70,16 @@ ul {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(10px); }
 }
+
 @media (max-width: 700px) {
     body {
         font-size: 18px;
-        margin: 0;
         padding: 0 16px;
     }
 
     .container {
         flex-direction: column;
-        height: auto;
+        min-height: auto;
         padding: 40px 0 20px 0;
         text-align: center;
         gap: 20px;
@@ -88,16 +96,10 @@ ul {
 
     .right img {
         width: 220px;
-        max-width: 100%;
     }
 
     p {
         font-size: 22px;
         line-height: 1.4;
-    }
-
-    .ferilskra {
-        width: 100%;
-        text-align: left;
     }
 }

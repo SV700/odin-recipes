@@ -133,9 +133,9 @@ ul {
 }
 
 #click-hint span {
-    font-family: 'Caveat', cursive;
-    font-size: 26px;
-    font-weight: 600;
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 22px;
+    font-weight: 400;
     display: block;
 }
 

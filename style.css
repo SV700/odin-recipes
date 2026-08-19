@@ -122,21 +122,17 @@ ul {
     pointer-events: none;
 }
 
-#click-hint {
-    position: absolute;
-    top: -70px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    animation: bounce 1.5s infinite;
-    pointer-events: none;
+#dvd-img:not(.floating) {
+    animation: wiggle 2.5s ease-in-out infinite;
 }
 
-#click-hint span {
-    font-family: 'Special Elite', 'Courier New', monospace;
-    font-size: 22px;
-    font-weight: 400;
-    display: block;
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    5% { transform: rotate(-6deg); }
+    10% { transform: rotate(6deg); }
+    15% { transform: rotate(-4deg); }
+    20% { transform: rotate(4deg); }
+    25% { transform: rotate(0deg); }
 }
 
 @media (max-width: 700px) {

@@ -66,6 +66,31 @@ ul {
     min-height: 400px;
 }
 
+curious-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.curious-btn a {
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    display: inline-block;
+}
+
+.curious-btn a:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
 .scroll-arrow {
     text-align: center;
     font-size: 36px;

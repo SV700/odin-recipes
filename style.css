@@ -23,6 +23,10 @@ main {
     align-items: center;
 }
 
+.right {
+    position: relative;
+}
+
 .right img {
     width: 300px;
     max-width: 100%;
@@ -66,7 +70,7 @@ ul {
     min-height: 400px;
 }
 
-curious-btn {
+.curious-btn {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -116,6 +120,24 @@ curious-btn {
     height: auto;
     z-index: 9999;
     pointer-events: none;
+}
+
+#click-hint {
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    animation: bounce 1.5s infinite;
+    pointer-events: none;
+}
+
+#click-hint span {
+    display: block;
+    font-size: 16px;
+    line-height: 1;
 }
 
 @media (max-width: 700px) {

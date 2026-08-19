@@ -17,7 +17,11 @@
 					</div>
 
 					<div class="right">
-						<img id="dvd-img" src="mynd4.png" alt="mynd" />
+    					<img id="dvd-img" src="mynd4.png" alt="mynd" />
+    					<div id="click-hint">
+        					<span>↑</span>
+        					Click
+    					</div>
 					</div>
 				</div>
 
@@ -45,6 +49,8 @@
 			let imgIndex = 0;
 
 			dvdImg.addEventListener('click', () => {
+				document.getElementById('click-hint').style.display = 'none';
+
 				if (floating) return;
 
 				floating = true;

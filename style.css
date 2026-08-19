@@ -34,6 +34,14 @@ h1 {
     font-size: 72px;
     font-weight: 900;
 }
+.domain-style {
+    font-style: italic;
+    font-size: 0.4em;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0 4px;
+}
 
 .left {
     max-width: 400px;

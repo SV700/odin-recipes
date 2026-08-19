@@ -124,20 +124,19 @@ ul {
 
 #click-hint {
     position: absolute;
-    bottom: -30px;
-    right: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: 'Courier New', monospace;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     animation: bounce 1.5s infinite;
     pointer-events: none;
 }
 
 #click-hint span {
+    font-family: 'Caveat', cursive;
+    font-size: 26px;
+    font-weight: 600;
     display: block;
-    font-size: 16px;
-    line-height: 1;
 }
 
 @media (max-width: 700px) {

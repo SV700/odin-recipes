@@ -6,6 +6,9 @@
 		<title>Vefsíða</title>
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="image/png" href="mynd4.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
@@ -17,11 +20,14 @@
 					</div>
 
 					<div class="right">
-    					<img id="dvd-img" src="mynd4.png" alt="mynd" />
-    					<div id="click-hint">
-        					<span>↑</span>
-        					Click
-    					</div>
+						<img id="dvd-img" src="mynd4.png" alt="mynd" />
+						<div id="click-hint">
+							<span>Click</span>
+							<svg width="20" height="40" viewBox="0 0 20 40">
+								<line x1="10" y1="0" x2="10" y2="30" stroke="black" stroke-width="2"/>
+								<path d="M4,24 L10,32 L16,24" stroke="black" stroke-width="2" fill="none"/>
+							</svg>
+						</div>
 					</div>
 				</div>
 
@@ -43,8 +49,7 @@
 				'mynd2.png',
 				'mynd3.png',
 				'mynd5.png',
-				'mynd6.png',
-	
+				'mynd6.png'
 			];
 			let imgIndex = 0;
 

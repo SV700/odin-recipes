@@ -47,21 +47,21 @@
 				'mynd6.png'
 			];
 			let imgIndex = 0;
-
 			dvdImg.addEventListener('click', () => {
-				document.getElementById('click-hint').style.display = 'none';
+    			if (floating) return;
 
-				if (floating) return;
+    			floating = true;
+    			dvdImg.style.animation = 'none';  // <-- add this line
 
-				floating = true;
-				const rect = dvdImg.getBoundingClientRect();
-				x = rect.left;
-				y = rect.top;
+    			const rect = dvdImg.getBoundingClientRect();
+   				x = rect.left;
+    			y = rect.top;
 
-				document.body.appendChild(dvdImg);
-				dvdImg.classList.add('floating');
-				animate();
+    			document.body.appendChild(dvdImg);
+    			dvdImg.classList.add('floating');
+    			animate();
 			});
+		
 
 			function nextImage() {
 				imgIndex = (imgIndex + 1) % images.length;
